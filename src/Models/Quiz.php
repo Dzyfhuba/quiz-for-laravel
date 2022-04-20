@@ -2,6 +2,7 @@
 
 namespace Dzyfhuba\QuizSys\Models;
 
+use Dzyfhuba\QuizSys\Database\Factories\QuizFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -24,7 +25,7 @@ class Quiz extends Model
 
     public static function newFactory()
     {
-        return \Dzyfhuba\QuizSys\Database\Factories\QuizFactory::new();
+        return QuizFactory::new();
     }
 
     public function questions()

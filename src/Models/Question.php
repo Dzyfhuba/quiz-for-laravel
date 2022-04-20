@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Question extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $gaurded = ['id'];
+    protected $guarded = ['id'];
     public function getTable()
     {
         return config('quiz-system-for-laravel.table_names.questions');
