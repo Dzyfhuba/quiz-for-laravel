@@ -1,0 +1,54 @@
+{
+    "name": "dzyfhuba/quiz-system-for-laravel",
+    "description": "Provides Quiz System",
+    "keywords": [
+        "Dzyfhuba",
+        "quiz-system-for-laravel"
+    ],
+    "homepage": "https://github.com/Dzyfhuba/quiz-system-for-laravel",
+    "license": "MIT",
+    "type": "library",
+    "authors": [{
+        "name": "Hafidz Ubaidillah",
+        "email": "hafidz21ub@gmail.com",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": "^7.4|^8.0|^8.1",
+        "illuminate/support": "^7.4|^8.0|^8.1"
+    },
+    "require-dev": {
+        "nunomaduro/larastan": "^2.0",
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dzyfhuba\\QuizSys\\": "src",
+            "Dzyfhuba\\QuizSys\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dzyfhuba\\QuizSys\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dzyfhuba\\QuizSys\\QuizSysServiceProvider"
+            ],
+            "aliases": {
+                "QuizSys": "Dzyfhuba\\QuizSys\\QuizSysFacade"
+            }
+        }
+    }
+}
